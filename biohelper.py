@@ -3,12 +3,14 @@ from .. import loader, utils
 import logging
 import datetime
 import time
+import telethon
 
 from telethon import types
-from telethon import eventsi
+from telethon.tl.types import Message
 
 logger = logging.getLogger(__name__)
 
 class heal():
-    if message.raw_text == 'хил':
-        message.reply('!купить вакцину')
+    async def heal(self, message):
+        if message.raw_text == 'хил':
+            message.reply('!купить вакцину')
