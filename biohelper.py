@@ -10,7 +10,16 @@ from telethon.tl.types import Message
 
 logger = logging.getLogger(__name__)
 
-class heal():
+@loader.tds
+class heal(loader.Module):
+    
+    def __init__(self):
+        self.config = loader.ModuleConfig("POSSIBLE_VALUES", {"хил - .купить вакцину")
+
+    
     async def heal(self, message):
-        if message.raw_text == 'хил':
-            message.reply('!купить вакцину')
+        if await self.allmodules.check_security(message, security.OWNER | security.SUDO):
+            args = utils.get_args(message)
+            if message.raw_text == 'хил':
+                print(message)
+                message.reply('.купить вакцину')
