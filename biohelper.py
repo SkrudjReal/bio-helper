@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class heal(loader.Module):
     
     def __init__(self):
-        self.config = loader.ModuleConfig("POSSIBLE_VALUES", {"хил - .купить вакцину")
+        self.config = loader.ModuleConfig("POSSIBLE_VALUES", {"хил - .купить вакцину"})
 
     
     async def heal(self, message):
