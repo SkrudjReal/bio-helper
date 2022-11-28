@@ -26,7 +26,6 @@ from telethon.errors.rpcerrorlist import FloodWaitError
 from datetime import datetime, date, time
 import logging
 import types
-from ..inline.types import InlineCall
 
 import random
 import subprocess
